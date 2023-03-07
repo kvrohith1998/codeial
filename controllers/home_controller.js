@@ -12,7 +12,7 @@ module.exports.home = async function(req, res){
                 populate: {
                     path: 'user'
                 }
-            })
+            });
             let users = await User.find({});
 
             return res.render('home', {
